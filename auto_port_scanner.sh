@@ -23,7 +23,7 @@ echo -e "${RED}$ascii_art${END}"
 echo -e "${BOLD_YELLOW}                                                                                  By: CyberPL ${END}"
 
 # Perform masscan port scan
-echo -e "${BOLD_YELLOW}---------------------------[ MASSCAN ]---------------------------${END}"
+echo -e "${BOLD_YELLOW}------------------------------------------[ MASSCAN ]-----------------------------------------${END}"
 echo -e "${GREEN} masscan -iL "${TARGETS_FILE}" -p- -oL "${MASSCAN_OUTPUT}" ${END}"
 masscan -iL "${TARGETS_FILE}" -p- -oL "${MASSCAN_OUTPUT}"
 
@@ -31,16 +31,16 @@ masscan -iL "${TARGETS_FILE}" -p- -oL "${MASSCAN_OUTPUT}"
 cat "${MASSCAN_OUTPUT}" | grep "open" | awk '{print $3}' > "masscan_port.txt"
 
 
-# If you to set a range use '-r' like '-r 1 - 500'
+# If you to set a range use '-r' like '-r 1 - 65535'
 # Perform rustscan port scan 
-echo -e "${BOLD_YELLOW}--------------------------[ RUSTSCAN ]---------------------------${END}"
+echo -e "${BOLD_YELLOW}-----------------------------------------[ RUSTSCAN ]-----------------------------------------${END}"
 echo -e "${GREEN} rustscan -a "${TARGETS_FILE}" -g -r 1-65535 | awk '{print $3}' | tr -d []  > "rustscan_port.txt" ${END}" 
 rustscan -a "${TARGETS_FILE}" -g -r 1-65535 | awk '{print $3}' | tr -d []  > "rustscan_port.txt"
 
 
 
 # Perform nmap port scan
-echo -e "${BOLD_YELLOW}----------------------------[ NMAP ]-----------------------------${END}"
+echo -e "${BOLD_YELLOW}-------------------------------------------[ NMAP ]-------------------------------------------${END}"
 echo -e "${GREEN} nmap -iL "${TARGETS_FILE}" -p1-65535 > "${NMAP_OUTPUT}" ${END}" 
 nmap -iL "${TARGETS_FILE}" -p1-65535 > "${NMAP_OUTPUT}"
 
@@ -80,4 +80,3 @@ else
 fi
 
 echo -e "${BOLD_RED} Scan completed and results saved. ${END}"
-
