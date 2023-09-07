@@ -1,0 +1,3 @@
+#Make a targets.txt file contains only one ip address at a time.
+#like:-
+8.8.8.8
