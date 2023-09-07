@@ -20,3 +20,5 @@ Nmap github link :- https://github.com/nmap/nmap
 # Usage
 
 sudo ./auto_port_scanner.sh targets.txt
+
+![alt text](https://github.com/CyberPL/-Auto-Port-Scanner/blob/main/sample.png)
