@@ -16,3 +16,7 @@ rustscan github link :- https://github.com/RustScan/RustScan
 3.Install Nmap if Nmap doesn't installed in your OS.
 
 Nmap github link :- https://github.com/nmap/nmap
+
+# Usage
+
+sudo ./auto_port_scanner.sh targets.txt
