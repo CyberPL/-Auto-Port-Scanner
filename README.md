@@ -4,6 +4,7 @@ By using bash script I was making a automate port scanner via some tools like Ma
 
 
 Requirements:
+
 1.Install masscan if masscan doesn't installed in your OS.
 masscan github link :- https://github.com/robertdavidgraham/masscan
 
